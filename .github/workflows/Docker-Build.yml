@@ -32,7 +32,7 @@ jobs:
             - name: Run tests
               uses: addnab/docker-run-action@v3
               with:
-                image: ${{ secrets.IMAGE_NAME }}/my-app:latest
+                image: ${{ secrets.DOCKER_USERNAME}}/${{ secrets.IMAGE_NAME }}:latest
                 options: --rm
                 run: ./run-tests.sh
 
