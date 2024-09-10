@@ -27,7 +27,7 @@ jobs:
               with:
                 context: .
                 tags: ${{ secrets.IMAGE_NAME }}/my-app:latest
-                push: false
+                push: true
             
             - name: Run tests
               uses: addnab/docker-run-action@v3
