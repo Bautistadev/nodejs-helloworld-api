@@ -1,4 +1,4 @@
-name: DockerFile-Build
+name: DockerFile-Push
 
 on:
     push:
@@ -27,7 +27,4 @@ jobs:
               with:
                 context: .
                 tags: ${{ secrets.DOCKER_USERNAME}}/${{ secrets.IMAGE_NAME }}:latest
-                push: false
-            
-            
-
+                push: true
